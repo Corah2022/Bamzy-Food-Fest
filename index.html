@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./food.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virginia Food Festival | People's Choice Awards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="top">
+      <div class="hero__glow hero__glow--right"></div>
+      <div class="hero__glow hero__glow--left"></div>
+
+      <nav class="nav container">
+        <a class="brand" href="#top" aria-label="Virginia Food Festival">
+          <img src="./food.png" alt="Festival Logo" />
+        </a>
+
+        <div class="nav__links">
+          <a href="#gallery">Dishes</a>
+          <a href="#guide">How It Works</a>
+          <a href="#guide">Contest Info</a>
+        </div>
+
+        <button class="nav__toggle" id="menu-toggle" aria-label="Open menu" type="button">
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+          <span class="nav__toggle-line"></span>
+        </button>
+      </nav>
+
+      <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-menu__nav" aria-label="Mobile Navigation">
+          <a href="#top" class="mobile-menu__link">Home</a>
+          <a href="#gallery" class="mobile-menu__link">Dishes</a>
+          <button class="mobile-menu__button" id="mobile-vote-button" type="button">Vote Now</button>
+        </nav>
+      </div>
+
+      <div class="hero__content container">
+        <div class="hero__text">
+          <div class="eyebrow">
+            <span class="eyebrow__dot"></span>
+            <span>Food Choice Awards 2026</span>
+          </div>
+
+          <h1>Your Vote <br /><span>Chooses the Best Dish.</span></h1>
+
+          <p class="hero__summary">
+            Explore standout dishes prepared for this year&apos;s festival, discover bold flavors,
+            and cast your vote for the plate you think deserves the People&apos;s Choice crown at the
+            Virginia Food Festival.
+          </p>
+
+          <div class="hero__actions">
+            <button class="button button--primary" id="start-voting" type="button">
+              Start Voting
+            </button>
+
+            <div class="activity">
+              <div class="activity__avatars" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <span class="activity__text">+2.4k Voting Today</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <div class="hero-card">
+            <img
+              src="https://coresg-normal.trae.ai/api/ide/v1/text_to_image?prompt=award-winning%20festival%20food%20platter%20with%20gourmet%20street%20food%2C%20warm%20cinematic%20lighting%2C%20realistic%20editorial%20photography%2C%20overhead%20presentation&image_size=landscape_16_9"
+              alt="Food festival signature dishes"
+              class="hero-card__image"
+            />
+
+            <div class="hero-card__stats">
+              <article class="stat-card">
+                <p class="stat-card__label">Contest</p>
+                <p class="stat-card__value">8 Signature Dishes Competing</p>
+              </article>
+
+              <article class="stat-card">
+                <p class="stat-card__label">Voting</p>
+                <p class="stat-card__value">Winners Decided by Food Lovers</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="guide" id="guide">
+        <div class="container">
+          <div class="guide__header">
+            <div>
+              <p class="section-tag">Voting Guide</p>
+              <h2>Your vote helps crown the most loved dish at the festival.</h2>
+              <p class="section-copy">
+                Follow the official contest flow to browse the menu, choose the dish that impressed
+                you most, and support the chef you want the community to celebrate.
+              </p>
+            </div>
+
+            <div class="deadline">Deadline: December 2026</div>
+          </div>
+
+          <div class="guide__grid">
+            <article class="info-card">
+              <p class="info-card__title">Dish Identity</p>
+              <p class="info-card__text">
+                Every dish is assigned a unique social media hashtag for official vote tracking.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <p class="info-card__title">Digital Ballot</p>
+              <p class="info-card__text">
+                Click the "Cast Vote" button below your favorite dish to open the secure ballot.
+              </p>
+            </article>
+
+            <article class="info-card">
+              <p class="info-card__title">Live Impact</p>
+              <p class="info-card__text">
+                Your support directly influences the final community rankings before voting closes.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="gallery" id="gallery">
+        <div class="container">
+          <div class="gallery__header">
+            <p class="section-tag">Festival Menu</p>
+            <h2>Featured Food</h2>
+          </div>
+
+          <div class="filters" id="filters">
+            <button class="filters__button is-active" data-category="All" type="button">All</button>
+            <button class="filters__button" data-category="Street Food" type="button">Street Food</button>
+            <button class="filters__button" data-category="Main Course" type="button">Main Course</button>
+            <button class="filters__button" data-category="Dessert" type="button">
+              Dessert
+            </button>
+          </div>
+
+          <div class="gallery__grid" id="gallery-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="vote-toast" aria-live="polite">
+      <p class="toast__label">Vote Submitted</p>
+      <p class="toast__title" id="toast-title"></p>
+      <p class="toast__copy" id="toast-copy"></p>
+    </div>
+
+    <div class="vote-modal" id="vote-modal" aria-hidden="true">
+      <div class="vote-modal__backdrop" data-close-vote-modal></div>
+      <div
+        class="vote-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="vote-modal-heading"
+      >
+        <div class="vote-modal__accent"></div>
+        <button class="vote-modal__close" id="vote-modal-close" type="button" aria-label="Close vote popup">
+          &times;
+        </button>
+        <div class="vote-modal__content" id="vote-modal-content"></div>
+      </div>
+    </div>
+
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
