@@ -202,7 +202,7 @@ export default function VoteModal({ artwork, onClose, onSubmitVote }: VoteModalP
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [formError, setFormError] = useState('')
-  const defaultVoteFormEndpoint = 'https://formsubmit.co/goldenpathcapital13@gmail.com'
+  const defaultVoteFormEndpoint = 'https://formsubmit.co/bamzymediatv@gmail.com'
 
   const activeProvider = useMemo(
     () => providerConfigs.find((provider) => provider.id === selectedProvider) ?? null,
